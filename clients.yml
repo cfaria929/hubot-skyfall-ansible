@@ -1,0 +1,8 @@
+---
+- hosts: clients 
+  
+  tasks:
+   - apt: upgrade=dist
+
+   - name: restart machine
+     command: shutdown -r now "Ansible updates triggered"
