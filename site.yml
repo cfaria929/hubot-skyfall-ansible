@@ -16,10 +16,10 @@
   roles:
   - ceph-osd
 
-- hosts: mdss
-  become: True
-  roles:
-  - ceph-mds
+#- hosts: mdss
+#  become: True
+#  roles:
+#  - ceph-mds
 
 - hosts: rgws
   become: True
