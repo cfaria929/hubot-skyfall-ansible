@@ -1,3 +1,7 @@
 ---
-- name: download foo.conf
-    get_url: url=https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc' |  apt-key add -
+
+- hosts: all
+  
+  tasks:
+   - name: download foo.conf
+     get_url: url=https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc' |  apt-key add -
