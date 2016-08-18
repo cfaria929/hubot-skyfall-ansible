@@ -4,4 +4,4 @@
   
   tasks:
    - name: download foo.conf
-      command: wget -q -O- 'https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc'  
+     command: wget -q -O- 'https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc'  
