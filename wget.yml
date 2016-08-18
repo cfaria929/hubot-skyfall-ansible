@@ -8,4 +8,5 @@
    - name: Ceph Debian-Jewel set   
      shell: "echo deb http://download.ceph.com/debian-jewel/ $(lsb_release -sc) main | sudo tee /etc/apt/sources.list.d/ceph.list"
    - name: Update apt
+  tasks:
    - apt: update_cache=yes
