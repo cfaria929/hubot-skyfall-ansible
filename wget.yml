@@ -4,4 +4,4 @@
   
   tasks:
    - name: download foo.conf
-     get_url: url=https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc
+     shell: "wget -q -O- 'https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc' | sudo apt-key add -"
