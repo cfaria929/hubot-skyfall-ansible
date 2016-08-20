@@ -3,6 +3,7 @@
   
   tasks:
    - apt: upgrade=dist
+   - apt: name='open-vm-tools' state='present' update_cache='yes'
 
    - name: restart machine
      command: shutdown -r now "Ansible updates triggered"
