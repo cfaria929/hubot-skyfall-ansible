@@ -13,7 +13,7 @@
    - name: Creates directory
      file: path=/ceph/.ssh/ state=directory
    - name: create a new file with lineinfile
-     lineinfile: dest=/ceph/.ssh/authorized_keys 
+     lineinfile: dest=/home/ceph/.ssh/authorized_keys 
                  regexp='^' line='ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDri3MJn9Z8xh631YwyQTKH5PvvxXPXid3M/t6pQee6jWym8q0MGfYz4A5gila+QnG47Kj0bB+LnRJKie07smgmbRx3fEhR6WvGTn9dt0iH95WxpV+cxq4iNOFxOlx1g7VT742EUJtb1C6bqr733rcAebFIMJmpPapggpy5DyyvxFgHK6nQoSbPl7l6Xf+RB6J1Q5mMMt4GQ1gwKqJ0PC9X2Knde9yWD2jamkyChWY2jYEFPia5s43W/3ENaC5uD4i7++ML291Auquyi+mFS+UHOHDw5MnsuOvdbkLxrTta7r9tJDh3AbGl5OXgNBeF9+G5oR8FW2LxbbTqNW8/6xsT ansible-generated on client1'
                  state=present
                  create=True
