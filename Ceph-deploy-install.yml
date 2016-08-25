@@ -9,4 +9,4 @@
    - name: create ceph user with id_rsa
      user: name=ceph generate_ssh_key=yes ssh_key_bits=2048 ssh_key_file=.ssh/id_rsa
    - name: add hosts to known hosts ssh_key_file
-     shell: ssh-keyscan ods1.skyfall osd2.skyfall osd3.skyfall radosgw.skyfall client2.skyfall client3.skyfall client4.skyfall >> /home/ceph/.ssh/known_hosts
+     shell: 'ssh-keyscan ods1.skyfall osd2.skyfall osd3.skyfall radosgw.skyfall client2.skyfall client3.skyfall client4.skyfall >> /home/ceph/.ssh/known_hosts'
