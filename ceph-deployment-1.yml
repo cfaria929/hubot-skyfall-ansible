@@ -7,6 +7,6 @@
    - apt_repository: repo='deb http://download.ceph.com/debian-jewel/ trusty main' state=present update_cache='yes'
    - apt: name='ceph-deploy' state='present' update_cache='yes'
    - name: Creates directory
-     file: path=/root/my-cluster/ state=directory
+     file: path=/home/ceph/my-cluster/ state=directory
    - name: ceph-deploy new monitor
-     shell: ceph-deploy new client2.skyfall client3.skyfall client4.skfall chdir=/root/my-cluster
+     shell: ceph-deploy new client2.skyfall client3.skyfall client4.skfall chdir=/home/ceph/my-cluster
