@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  
+  tasks:
+   - name: Creates directory
+     file: path=/home/ceph/my-cluster/ state=directory
+   - name: ceph-deploy monitor1
+     shell: ceph-deploy new client2.skyfall chdir=/home/ceph/my-cluster
+   - name: ceph-deploy monitor2
+     shell: ceph-deploy new client3.skyfall chdir=/home/ceph/my-cluster
+   - name: ceph-deploy monitor3
+     shell: ceph-deploy new client4.skyfall chdir=/home/ceph/my-cluster
