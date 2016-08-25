@@ -6,4 +6,4 @@
    - name: Creates directory
      file: path=/home/ceph/my-cluster/ state=directory
    - name: ceph-deploy new monitor
-     shell: ceph-deploy new client2.skyfall chdir=/home/ceph/my-cluster
+     shell: ceph-deploy new client2.skyfall client3.skyfall client4.skyfall chdir=/home/ceph/my-cluster
