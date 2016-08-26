@@ -11,5 +11,5 @@
      shell: ceph-deploy new client3.skyfall chdir=/home/ceph/my-cluster
    - name: ceph-deploy monitor3
      shell: ceph-deploy new client4.skyfall chdir=/home/ceph/my-cluster
-   - name: Installing Ceph
-     shell: ceph-deploy install client1.skyfall client2.skyfall client3.skyfall client4.skyfall ods1.skyfall osd2.skyfall osd3.skyfall
+   - name: Installing Ceph ceph-deploy node
+     shell: ceph-deploy install client1.skyfall
