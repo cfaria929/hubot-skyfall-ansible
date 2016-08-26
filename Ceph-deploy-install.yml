@@ -22,3 +22,11 @@
      shell: ssh-keyscan client3.skyfall >> /home/ceph/.ssh/known_hosts
    - name: add monitor 3 to known hosts ssh_key_file  
      shell: ssh-keyscan client4.skyfall >> /home/ceph/.ssh/known_hosts
+   - name: add osd1 to known hosts ssh_key_file
+     shell: ssh-keyscan ods1.skyfall >> /home/ceph/.ssh/known_hosts
+   - name: add osd2 to known hosts ssh_key_file
+     shell: ssh-keyscan osd2.skyfall >> /home/ceph/.ssh/known_hosts
+   - name: add osd3 to known hosts ssh_key_file
+     shell: ssh-keyscan osd3.skyfall >> /home/ceph/.ssh/known_hosts
+   - name: add radosgw to known hosts ssh_key_file
+     shell: ssh-keyscan radosgw.skyfall >> /home/ceph/.ssh/known_hosts
