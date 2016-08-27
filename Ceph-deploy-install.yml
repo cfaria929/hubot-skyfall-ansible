@@ -7,7 +7,7 @@
    - apt_repository: repo='deb http://download.ceph.com/debian-jewel/ trusty main' state=present update_cache='yes'
    - apt: name='ceph-deploy' state='present' update_cache='yes'
    - name: create ceph user with id_rsa
-     user: name=ceph generate_ssh_key=yes ssh_key_bits=2048 ssh_key_file=.ssh/id_rsa
+     user: name=007 generate_ssh_key=yes ssh_key_bits=2048 ssh_key_file=.ssh/id_rsa
    - name: add osd1 to known hosts ssh_key_file
      shell: ssh-keyscan ods1.skyfall >> /home/ceph/.ssh/known_hosts
    - name: add osd2 to known hosts ssh_key_file
