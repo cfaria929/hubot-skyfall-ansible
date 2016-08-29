@@ -32,3 +32,5 @@
      shell: ssh-keyscan monitor2.skyfall >> /home/mdyson/.ssh/known_hosts
    - name: add monitor 3 to known hosts ssh_key_file  
      shell: ssh-keyscan monitor3.skyfall >> /home/mdyson/.ssh/known_hosts
+   - name: add ceph-deploy to known hosts ssh_key_file  
+     shell: ssh-keyscan ceph-deploy.skyfall >> /home/mdyson/.ssh/known_hosts
