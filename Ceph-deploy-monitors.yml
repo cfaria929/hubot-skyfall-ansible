@@ -6,12 +6,12 @@
    - name: Creates directory
      file: path=/home/mdyson/my-cluster/ state=directory
    - name: ceph-deploy monitor1
-     shell: ceph-deploy new monitor1.skyfall chdir=/home/mdyson/my-cluster
+     shell: ceph-deploy new monitor1 chdir=/home/mdyson/my-cluster
    - name: ceph-deploy monitor2
-     shell: ceph-deploy new monitor2.skyfall chdir=/home/mdyson/my-cluster
+     shell: ceph-deploy new monitor2 chdir=/home/mdyson/my-cluster
    - name: ceph-deploy monitor3
-     shell: ceph-deploy new monitor3.skyfall chdir=/home/mdyson/my-cluster
+     shell: ceph-deploy new monitor3 chdir=/home/mdyson/my-cluster
    - name: Installing Ceph ceph-deploy node
-     shell: ceph-deploy install ceph-deploy.skyfall osd1.skyfall osd2.skyfall  osd3.skyfall monitor1.skyfall monitor2.skyfall monitor3.skyfall radosgw.skyfall chdir=/home/mdyson/my-cluster
+     shell: ceph-deploy install ceph-deploy osd1 osd2  osd3 monitor1 monitor2 monitor3 radosgw chdir=/home/mdyson/my-cluster
    - name: Initilize Monitors
      shell: ceph-deploy mon create-initial chdir=/home/mdyson/my-cluster

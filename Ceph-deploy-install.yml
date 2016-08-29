@@ -6,20 +6,20 @@
    - apt_key: url=https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc state=present
    - apt_repository: repo='deb http://download.ceph.com/debian-jewel/ trusty main' state=present update_cache='yes'
    - apt: name='ceph-deploy' state='present' update_cache='yes'
-   - name: create 007 user with id_rsa
-     user: name=007 generate_ssh_key=yes ssh_key_bits=2048 ssh_key_file=.ssh/id_rsa
+   - name: create mdyson user with id_rsa
+     user: name=mdyson generate_ssh_key=yes ssh_key_bits=2048 ssh_key_file=.ssh/id_rsa
    - name: add osd1 to known hosts ssh_key_file
-     shell: ssh-keyscan ods1.skyfall >> /home/007/.ssh/known_hosts
+     shell: ssh-keyscan ods1 >> /home/mdyson/.ssh/known_hosts
    - name: add osd2 to known hosts ssh_key_file
-     shell: ssh-keyscan osd2.skyfall >> /home/007/.ssh/known_hosts
+     shell: ssh-keyscan osd2 >> /home/mdyson/.ssh/known_hosts
    - name: add osd3 to known hosts ssh_key_file
-     shell: ssh-keyscan osd3.skyfall >> /home/007/.ssh/known_hosts
+     shell: ssh-keyscan osd3 >> /home/mdyson/.ssh/known_hosts
    - name: add radosgw to known hosts ssh_key_file  
-     shell: ssh-keyscan radosgw.skyfall >> /home/007/.ssh/known_hosts
+     shell: ssh-keyscan radosgw >> /home/mdyson/.ssh/known_hosts
    - name: add monitor 1 to known hosts ssh_key_file  
-     shell: ssh-keyscan monitor1.skyfall >> /home/007/.ssh/known_hosts
+     shell: ssh-keyscan monitor1 >> /home/mdyson/.ssh/known_hosts
    - name: add monitor 2 to known hosts ssh_key_file  
-     shell: ssh-keyscan monitor2.skyfall >> /home/007/.ssh/known_hosts
+     shell: ssh-keyscan monitor2 >> /home/mdyson/.ssh/known_hosts
    - name: add monitor 3 to known hosts ssh_key_file  
-     shell: ssh-keyscan monitor3.skyfall >> /home/007/.ssh/known_hosts
+     shell: ssh-keyscan monitor3 >> /home/mdyson/.ssh/known_hosts
    

@@ -19,18 +19,18 @@
    - name: create mdyson user with id_rsa
      user: name=mdyson generate_ssh_key=yes ssh_key_bits=2048 ssh_key_file=.ssh/id_rsa
    - name: add osd1 to known hosts ssh_key_file
-     shell: ssh-keyscan osd1.skyfall >> /home/mdyson/.ssh/known_hosts
+     shell: ssh-keyscan osd1 >> /home/mdyson/.ssh/known_hosts
    - name: add osd2 to known hosts ssh_key_file
-     shell: ssh-keyscan osd2.skyfall >> /home/mdyson/.ssh/known_hosts
+     shell: ssh-keyscan osd2 >> /home/mdyson/.ssh/known_hosts
    - name: add osd3 to known hosts ssh_key_file
-     shell: ssh-keyscan osd3.skyfall >> /home/mdyson/.ssh/known_hosts
+     shell: ssh-keyscan osd3 >> /home/mdyson/.ssh/known_hosts
    - name: add radosgw to known hosts ssh_key_file  
-     shell: ssh-keyscan radosgw.skyfall >> /home/mdyson/.ssh/known_hosts
+     shell: ssh-keyscan radosgw >> /home/mdyson/.ssh/known_hosts
    - name: add monitor 1 to known hosts ssh_key_file  
-     shell: ssh-keyscan monitor1.skyfall >> /home/mdyson/.ssh/known_hosts
+     shell: ssh-keyscan monitor1 >> /home/mdyson/.ssh/known_hosts
    - name: add monitor 2 to known hosts ssh_key_file  
-     shell: ssh-keyscan monitor2.skyfall >> /home/mdyson/.ssh/known_hosts
+     shell: ssh-keyscan monitor2 >> /home/mdyson/.ssh/known_hosts
    - name: add monitor 3 to known hosts ssh_key_file  
-     shell: ssh-keyscan monitor3.skyfall >> /home/mdyson/.ssh/known_hosts
+     shell: ssh-keyscan monitor3 >> /home/mdyson/.ssh/known_hosts
    - name: add ceph-deploy to known hosts ssh_key_file  
-     shell: ssh-keyscan ceph-deploy.skyfall >> /home/mdyson/.ssh/known_hosts
+     shell: ssh-keyscan ceph-deploy >> /home/mdyson/.ssh/known_hosts
