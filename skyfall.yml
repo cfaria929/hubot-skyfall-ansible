@@ -1,0 +1,12 @@
+---
+- hosts: all
+  
+  tasks:
+   - name: update dns search 
+     lineinfile: dest=/etc/network/interfaces 
+                 regexp='^' line='dns-search skyfall '
+                 state=present
+                 create=True
+
+   - name: restart machine
+     command: shutdown -r now "Ansible updates triggered"
