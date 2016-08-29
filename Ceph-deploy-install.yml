@@ -6,7 +6,7 @@
    - apt_key: url=https://ceph.com/git/?p=ceph.git;a=blob_plain;f=keys/release.asc state=present
    - apt_repository: repo='deb http://download.ceph.com/debian-jewel/ trusty main' state=present update_cache='yes'
    - apt: name='ceph-deploy' state='present' update_cache='yes'
-   - name: create ceph user with id_rsa
+   - name: create 007 user with id_rsa
      user: name=007 generate_ssh_key=yes ssh_key_bits=2048 ssh_key_file=.ssh/id_rsa
    - name: add osd1 to known hosts ssh_key_file
      shell: ssh-keyscan ods1.skyfall >> /home/ceph/.ssh/known_hosts
@@ -17,16 +17,9 @@
    - name: add radosgw to known hosts ssh_key_file  
      shell: ssh-keyscan radosgw.skyfall >> /home/ceph/.ssh/known_hosts
    - name: add monitor 1 to known hosts ssh_key_file  
-     shell: ssh-keyscan client2.skyfall >> /home/ceph/.ssh/known_hosts
+     shell: ssh-keyscan monitor1.skyfall >> /home/ceph/.ssh/known_hosts
    - name: add monitor 2 to known hosts ssh_key_file  
-     shell: ssh-keyscan client3.skyfall >> /home/ceph/.ssh/known_hosts
+     shell: ssh-keyscan monitor2.skyfall >> /home/ceph/.ssh/known_hosts
    - name: add monitor 3 to known hosts ssh_key_file  
-     shell: ssh-keyscan client4.skyfall >> /home/ceph/.ssh/known_hosts
-   - name: add osd1 to known hosts ssh_key_file
-     shell: ssh-keyscan ods1.skyfall >> /home/ceph/.ssh/known_hosts
-   - name: add osd2 to known hosts ssh_key_file
-     shell: ssh-keyscan osd2.skyfall >> /home/ceph/.ssh/known_hosts
-   - name: add osd3 to known hosts ssh_key_file
-     shell: ssh-keyscan osd3.skyfall >> /home/ceph/.ssh/known_hosts
-   - name: add radosgw to known hosts ssh_key_file
-     shell: ssh-keyscan radosgw.skyfall >> /home/ceph/.ssh/known_hosts
+     shell: ssh-keyscan monitor3.skyfall >> /home/ceph/.ssh/known_hosts
+   
