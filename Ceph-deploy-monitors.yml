@@ -12,4 +12,6 @@
    - name: ceph-deploy monitor3
      shell: ceph-deploy new monitor3.skyfall chdir=/home/mdyson/my-cluster
    - name: Installing Ceph ceph-deploy node
-     shell: ceph-deploy install ceph-deploy.skyfall osd1.skyfall osd2.skyfall  osd3.skyfall monitor1.skyfall monitor2.skyfall monitor3.skyfall radosgw.skyfall
+     shell: ceph-deploy install ceph-deploy.skyfall osd1.skyfall osd2.skyfall  osd3.skyfall monitor1.skyfall monitor2.skyfall monitor3.skyfall radosgw.skyfall chdir=/home/mdyson/my-cluster
+   - name: Initilize Monitors
+     shell: ceph-deploy mon create-initial chdir=/home/mdyson/my-cluster
