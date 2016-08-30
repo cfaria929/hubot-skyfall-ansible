@@ -10,11 +10,4 @@
                  line='mdyson ALL=(ALL) NOPASSWD:ALL'
                  state=present
                  create=True 
-   - name: Creates directory
-     file: path=/home/mdyson/.ssh/ state=directory
-   - name: create authorized_keys file for mdyson user
-     lineinfile: dest=/home/mdyson/.ssh/authorized_keys 
-                 regexp='^' line='ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVsBHB+/iIHEbhcBh+/MckUUcwmz6rVwQkpX62KMyRVO3DX5TvLZmKEdWFQz9sxQwHcM2kyrtpA/6ndKPUb5t/KI+daSXOBp503JoBavirIsntOIlP5mZTuOi/0zmnXURjXdnjeGZoqidYMg+Lm/5OFTtqt6ATVvkPd2JXKqU6YuVfEiQI6gBhRc8dAOfNUQVx5Sf67qHFRUM36JB5h4UKgKnXWHEBKyD6s/oM+jf9Shg+ZOhSv3kDtG22iVwGhTJGtIWDcsu8lytX87IPeo84QAwYmGAWW4NQ2iloFgXh/jnEL19ndeDgnyiKYTNvn7KGxG0KwKAhWYck577IHWH9 ansible-generated on ceph-deploy'
-                 state=present
-                 create=True
    

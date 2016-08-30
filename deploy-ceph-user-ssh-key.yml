@@ -1,0 +1,20 @@
+---
+
+- hosts: all
+  
+  tasks:
+   
+   - name: This will copy the ssh_key to monitor1
+     shell: ssh-copy-id mdyson@monitor1
+   - name: This will copy the ssh_key to monitor2
+     shell: ssh-copy-id mdyson@monitor2
+   - name: This will copy the ssh_key to monitor3
+     shell: ssh-copy-id mdyson@monitor3
+   - name: This will copy the ssh_key to osd1
+     shell: ssh-copy-id mdyson@osd1
+   - name: This will copy the ssh_key to osd2
+     shell: ssh-copy-id mdyson@osd2
+   - name: This will copy the ssh_key to osd3
+     shell: ssh-copy-id mdyson@osd3
+   - name: This will copy the ssh_key to radosgw
+     shell: ssh-copy-id mdyson@radosgw  

@@ -16,8 +16,6 @@
                  create=True
    - name: create mdyson user with id_rsa
      user: name=mdyson generate_ssh_key=yes ssh_key_bits=2048 ssh_key_file=.ssh/id_rsa
-   - name: create mdyson user with id_rsa
-     user: name=mdyson generate_ssh_key=yes ssh_key_bits=2048 ssh_key_file=.ssh/id_rsa
    - name: add osd1 to known hosts ssh_key_file
      shell: ssh-keyscan osd1 >> /home/mdyson/.ssh/known_hosts
    - name: add osd2 to known hosts ssh_key_file
