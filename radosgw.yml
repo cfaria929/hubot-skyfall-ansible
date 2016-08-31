@@ -1,0 +1,8 @@
+---
+
+- hosts: all
+  
+  tasks:
+   - name: deploy rados gateway server on radosgw
+     shell: ceph-deploy install --rgw radosgw chdir=/home/mdyson/my-cluster
+
