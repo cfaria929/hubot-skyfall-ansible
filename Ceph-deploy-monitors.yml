@@ -15,3 +15,14 @@
      shell: ceph-deploy install ceph-deploy osd1 osd2  osd3 monitor1 monitor2 monitor3 radosgw chdir=/home/mdyson/my-cluster
    - name: Initilize Monitors
      shell: ceph-deploy mon create-initial chdir=/home/mdyson/my-cluster
+   - name: configure osd device on osd1
+     shell: ceph-deploy osd create osd1:sdb chdir=/home/mdyson/my-cluster
+   - name: configure osd device on osd2
+     shell: ceph-deploy osd create osd2:sdb chdir=/home/mdyson/my-cluster
+   - name: configure osd device on osd3
+     shell: ceph-deploy osd create osd3:sdb chdir=/home/mdyson/my-cluster
+   - name: deploy rados gateway server on radosgw
+     shell: ceph-deploy install --rgw radosgw chdir=/home/mdyson/my-cluster
+   - name: create gateway service on radosgw
+     shell: ceph-deploy rgw create radosgw chdir=/home/mdyson/my-cluster
+
