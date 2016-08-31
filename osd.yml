@@ -5,3 +5,7 @@
   tasks:
    - name: configure osd device on osd1
      shell: ceph-deploy osd create osd1:sdb chdir=/home/mdyson/my-cluster
+   - name: configure osd device on osd2
+     shell: ceph-deploy osd create osd2:sdb chdir=/home/mdyson/my-cluster
+   - name: configure osd device on osd3
+     shell: ceph-deploy osd create osd3:sdb chdir=/home/mdyson/my-cluster
