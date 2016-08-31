@@ -1,0 +1,8 @@
+---
+
+- hosts: all
+  
+  tasks:
+   - name: configure osd device on osd1
+     shell: ceph-deploy osd create osd1 sdb chdir=/home/mdyson/my-cluster
+     

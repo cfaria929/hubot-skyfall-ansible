@@ -4,7 +4,7 @@
   tasks:
    - name: update dns search 
      lineinfile: dest=/etc/network/interfaces 
-                 regexp='^' line='dns-search skyfall '
+                 line='dns-search skyfall '
                  state=present
                  create=True
 
