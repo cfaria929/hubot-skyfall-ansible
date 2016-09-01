@@ -14,7 +14,7 @@
      file: path=/home/mdyson/.ssh/ state=directory
    - name: create authorized_keys file for mdyson user
      lineinfile: dest=/home/mdyson/.ssh/authorized_keys 
-                 line='ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCzTL0+7Atfo6y1C99350LHBbfid+2cSyRxw6A4lCdUjphv8vA7Cdfrl7kiwZKnLoj+MA+8kvSs3iFdizLD6e8DemIOdpfYw9vtB5OwZxYIcHD4Ygnw7CApZDA/sj9+xor+fTQgBggjrXMs6zbjdM3qEC6cUdww1wAQ+3bt5RCRE2k/uWi2+cKiKxNVpvVtNRwQIsPUl8fqwIVmCi2naMdvihDkfIFfeBZTVQ7LpX5qv3ZpTJErcHMi4YTabXJk1jbSxNY+Evmc//Dcm59cbllcyBsY94DijTPwmSngb55zc4eY3Hvvuitnx3P3GoKmSV10gKTW4Upm/nIeg30n9sdt ansible-generated on ceph-deploy'
+                 line='ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDCZZwhq23f9uUv/BtsRRUyVd2rEy1kRCHSU3TwTRcCRkx9O6WzzanvOW1QjJFRZXf3X3BQ7XVfc2EeBmUuyl61279r7q0BfQqtFhGaNHvYJAzpvRcCYMn6anUiQKF32ZaRvkmERiWwIu8E0XufzpUY9GCuj7AwtxpoLITBnba2GuKUFG/Eurz2610BS4a2SlyWVEPl4wUiGmA7dsPSZTYM4eWbqBjdAV/ZlhUey6v91Im8xYr5ScNiQNGXTjilEIWW23pDpAUfbjqkkMOJ5/XEQ2fHVxBjKK2JlMoprQtOvWYEtdwNn6Qi6mAQ7R1vzmrbYM/Aa1/Zs0KYGX+RDDVv ansible-generated on ceph-deploy'
                  state=present
                  create=True
    
